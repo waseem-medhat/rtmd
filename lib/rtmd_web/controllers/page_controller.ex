@@ -6,4 +6,8 @@ defmodule RtmdWeb.PageController do
     # so skip the default app layout.
     render(conn, :home, layout: false)
   end
+
+  def welcome(conn, _params) do
+    render(conn, :welcome, layout: false, user: conn.assigns.current_user)
+  end
 end

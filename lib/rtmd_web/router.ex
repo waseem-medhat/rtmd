@@ -20,6 +20,7 @@ defmodule RtmdWeb.Router do
   scope "/", RtmdWeb do
     pipe_through [:browser, :fetch_current_user, :require_authenticated_user]
 
+    get "/welcome", PageController, :welcome
     get "/", PageController, :home
   end
 
